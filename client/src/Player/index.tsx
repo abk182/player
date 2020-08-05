@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
+import React, { FC } from 'react';
 
-const Player = (): ReactElement => {
+const Player: FC = () => {
   return <div>pl</div>;
 };
 
