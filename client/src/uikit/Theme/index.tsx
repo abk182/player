@@ -1,12 +1,19 @@
-import { createContext, useContext } from 'react';
+import { React, FC, useState, useContext, createContext } from 'react';
+import { THEME, Props, State, Context } from './types';
 
-export enum THEME {
-  DARK = 'dark',
-  LIGHT = 'light',
-}
-
-const ThemeContext = createContext<THEME>(THEME.LIGHT);
+export const ThemeContext = createContext<Context>(null);
 
 export const useTheme = (): THEME => useContext(ThemeContext);
 
-export default ThemeContext;
+const Theme: FC<Props> = ({ children }: Props) => {
+  const [state, setState] = useState<State>({ theme: THEME.LIGHT });
+  return (
+    <ThemeContext.Provider
+      value={{ ...state, setTheme: (theme: THEME) => setState({ ...state, theme }) }}
+    >
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+export default Theme;

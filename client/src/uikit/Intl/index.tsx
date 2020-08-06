@@ -3,12 +3,12 @@ import { IntlProvider } from 'react-intl';
 import { Props, State, Context, LOCALE } from './types';
 import messages from './messages';
 
-const Context = createContext<Context>(null);
+export const IntlContext = createContext<Context>(null);
 
 const Intl: FC<Props> = ({ children }: Props) => {
   const [state, setState] = useState<State>({ locale: LOCALE.RU, messages: messages[LOCALE.RU] });
   return (
-    <Context.Provider
+    <IntlContext.Provider
       value={{
         ...state,
         setLocale: (locale: LOCALE) => setState({ ...state, locale, messages: messages[locale] }),
@@ -22,7 +22,7 @@ const Intl: FC<Props> = ({ children }: Props) => {
       >
         {children}
       </IntlProvider>
-    </Context.Provider>
+    </IntlContext.Provider>
   );
 };
 

@@ -1,12 +1,15 @@
-import React, { ReactElement } from 'react';
-import Theme, { THEME } from 'src/uikit/Theme';
+import React, { FC } from 'react';
+import Theme from 'src/uikit/Theme';
+import Intl from 'src/uikit/Intl';
 import Player from 'src/Player';
 
-const App = (): ReactElement => {
+const App = (): FC => {
   return (
-    <Theme.Provider value={THEME.LIGHT}>
-      <Player />
-    </Theme.Provider>
+    <Intl>
+      <Theme>
+        <Player />
+      </Theme>
+    </Intl>
   );
 };
 
