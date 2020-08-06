@@ -1,5 +1,5 @@
 {
-  "name": "pokedex",
+  "name": "players",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abk182/pokedex.git"
+    "url": "git+https://github.com/abk182/players.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/abk182/pokedex/issues"
+    "url": "https://github.com/abk182/players/issues"
   },
-  "homepage": "https://github.com/abk182/pokedex#readme",
+  "homepage": "https://github.com/abk182/players#readme",
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
