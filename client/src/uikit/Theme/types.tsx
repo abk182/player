@@ -1,4 +1,4 @@
-import ReactChildren from 'react';
+import { ReactNode } from 'react';
 
 export enum THEME {
   DARK = 'dark',
@@ -6,7 +6,7 @@ export enum THEME {
 }
 
 export interface Props {
-  children: ReactChildren;
+  children: ReactNode;
 }
 
 export interface State {

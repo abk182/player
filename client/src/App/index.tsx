@@ -3,7 +3,7 @@ import Theme from 'src/uikit/Theme';
 import Intl from 'src/uikit/Intl';
 import Player from 'src/Player';
 
-const App = (): FC => {
+const App: FC = () => {
   return (
     <Intl>
       <Theme>

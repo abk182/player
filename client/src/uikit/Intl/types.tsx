@@ -1,4 +1,4 @@
-import { ReactChildren } from 'react';
+import { ReactNode } from 'react';
 
 export enum LOCALE {
   RU = 'ru',
@@ -6,7 +6,7 @@ export enum LOCALE {
 }
 
 export interface Props {
-  children: ReactChildren;
+  children: ReactNode;
 }
 
 export interface State {
