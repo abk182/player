@@ -1,8 +1,8 @@
 import React, { FC, useContext } from 'react';
 import { useIntl } from 'react-intl';
 import Button from 'src/uikit/Button';
-import { ThemeContext } from 'src/uikit/Theme';
-import { THEME } from 'src/uikit/Theme/types';
+import { ThemeContext } from 'src/App/Theme/Provider';
+import { THEME } from 'src/App/Theme/Provider/types';
 
 const ThemeToggleButton: FC = () => {
   const intl = useIntl();

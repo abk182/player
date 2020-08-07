@@ -1,8 +1,8 @@
 import React, { FC, useContext } from 'react';
 import { useIntl } from 'react-intl';
 import Button from 'src/uikit/Button';
-import { IntlContext } from 'src/uikit/Intl';
-import { LOCALE } from 'src/uikit/Intl/types';
+import { IntlContext } from 'src/App/Intl/Provider';
+import { LOCALE } from 'src/App/Intl/Provider/types';
 
 const IntlToggleButton: FC = () => {
   const intl = useIntl();
