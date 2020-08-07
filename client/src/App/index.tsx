@@ -1,22 +1,22 @@
 import React, { FC } from 'react';
-import Theme from 'src/uikit/Theme';
-import ThemeToggleButton from 'src/uikit/Theme/ToggleButton';
-import Intl from 'src/uikit/Intl';
-import IntlToggleButton from 'src/uikit/Intl/ToggleButton';
-import Player from 'src/Player';
+import ThemeProvider from 'src/App/Theme/Provider';
+import ThemeToggleButton from 'src/App/Theme/ToggleButton';
+import IntlProvider from 'src/App/Intl/Provider';
+import IntlToggleButton from 'src/App/Intl/ToggleButton';
+import Player from 'src/App/Player';
 import styles from './style.css';
 
 const App: FC = () => {
   return (
-    <Intl>
-      <Theme>
+    <IntlProvider>
+      <ThemeProvider>
         <div className={styles['container']}>
           <ThemeToggleButton />
           <IntlToggleButton />
           <Player />
         </div>
-      </Theme>
-    </Intl>
+      </ThemeProvider>
+    </IntlProvider>
   );
 };
 

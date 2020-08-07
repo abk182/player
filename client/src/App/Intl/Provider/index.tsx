@@ -1,7 +1,7 @@
 import React, { FC, useState, createContext } from 'react';
 import { IntlProvider } from 'react-intl';
-import { Props, State, Context, LOCALE } from './types';
-import messages from './messages';
+import { Props, State, Context, LOCALE } from 'src/App/Intl/Provider/types';
+import messages from 'src/App/Intl/messages';
 
 export const IntlContext = createContext<Context>(null);
 
