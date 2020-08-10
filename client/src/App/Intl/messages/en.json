@@ -1,5 +1,7 @@
 {
   "hello": "hello",
   "locale": "locale: {locale}",
-  "theme": "theme: {theme}"
+  "theme": "theme: {theme}",
+  "play": "Play",
+  "pause": "Pause"
 }

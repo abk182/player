@@ -1,0 +1,17 @@
+.container {
+  padding: 30px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.player{
+  width: 100%;
+}

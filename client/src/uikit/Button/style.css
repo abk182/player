@@ -1,0 +1,9 @@
+.container:global.light {
+  background-color: var(--primary);
+  color: var(--main);
+}
+
+.container:global.dark {
+  background-color: var(--main);
+  color: var(--primary);
+}

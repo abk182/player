@@ -1,5 +1,7 @@
 {
   "hello": "привет",
   "locale": "язык: {locale}",
-  "theme": "цветовая тема: {theme}"
+  "theme": "цветовая тема: {theme}",
+  "play": "Пуск",
+  "pause": "Пауза"
 }

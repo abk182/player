@@ -1,22 +1,26 @@
 import React, { FC } from 'react';
-import ThemeProvider from 'src/App/Theme/Provider';
-import ThemeToggleButton from 'src/App/Theme/ToggleButton';
+import 'regenerator-runtime/runtime';
+import ThemeProvider, { ThemeContext } from 'src/App/Theme/Provider';
 import IntlProvider from 'src/App/Intl/Provider';
-import IntlToggleButton from 'src/App/Intl/ToggleButton';
-import Player from 'src/App/Player';
+import Home from './Home';
 import styles from './style.css';
+import { StylesProvider } from '@material-ui/core/styles';
 
 const App: FC = () => {
   return (
-    <IntlProvider>
-      <ThemeProvider>
-        <div className={styles['container']}>
-          <ThemeToggleButton />
-          <IntlToggleButton />
-          <Player />
-        </div>
-      </ThemeProvider>
-    </IntlProvider>
+    <StylesProvider injectFirst>
+      <IntlProvider>
+        <ThemeProvider>
+          <ThemeContext.Consumer>
+            {({ theme }) => (
+              <div className={`${styles['container']} ${theme}`}>
+                <Home />
+              </div>
+            )}
+          </ThemeContext.Consumer>
+        </ThemeProvider>
+      </IntlProvider>
+    </StylesProvider>
   );
 };
 
