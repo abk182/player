@@ -6,7 +6,7 @@ import { Props, State } from './types';
 import applyZoom from './helpers/applyZoom';
 import styles from './style.css';
 
-const Player: FC<Props> = ({ style, className }: Props) => {
+const Player: FC<Props> = ({ src, style, className }: Props) => {
   const hlsRef = useRef<Hls>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -38,7 +38,7 @@ const Player: FC<Props> = ({ style, className }: Props) => {
   useEffect(() => {
     if (Hls.isSupported && hlsRef.current == null) {
       hlsRef.current = new Hls();
-      hlsRef.current.loadSource('http://localhost:3000/sample.m3u8');
+      hlsRef.current.loadSource(src);
       hlsRef.current.attachMedia(videoRef.current);
       hlsRef.current.on(Hls.Events.MANIFEST_PARSED, Play);
     }

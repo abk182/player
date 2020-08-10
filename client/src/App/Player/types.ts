@@ -1,4 +1,5 @@
 export interface Props {
+  src: string;
   style?: { [key: string]: string };
   className?: string;
 }

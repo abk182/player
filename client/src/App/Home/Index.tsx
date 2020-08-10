@@ -11,7 +11,7 @@ export const Home: FC = () => {
         <ThemeToggleButton />
         <IntlToggleButton />
       </div>
-      <Player className={styles['player']} />
+      <Player className={styles['player']} src="http://localhost:3000/sample.m3u8" />
     </div>
   );
 };
