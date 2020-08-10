@@ -19,6 +19,7 @@ const Player: FC<Props> = ({ style, className }: Props) => {
       await videoRef.current.play();
       setState({ ...state, isPending: false, isPaused: false });
     } catch (e) {
+      console.error(e);
       setState({ ...state, isPaused: true, isPending: false });
     }
   }, []);
@@ -29,6 +30,7 @@ const Player: FC<Props> = ({ style, className }: Props) => {
       await videoRef.current.pause();
       setState({ ...state, isPending: false, isPaused: true });
     } catch (e) {
+      console.error(e);
       setState({ ...state, isPaused: true, isPending: false });
     }
   }, []);
@@ -51,7 +53,7 @@ const Player: FC<Props> = ({ style, className }: Props) => {
       >
         {state.isPaused ? <FormattedMessage id="play" /> : <FormattedMessage id="pause" />}
       </Button>
-      <video className={styles['video']} ref={videoRef} />
+      <video className={styles['video']} ref={videoRef} autoPlay />
     </div>
   );
 };
